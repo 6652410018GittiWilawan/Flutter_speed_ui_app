@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_ui_app/views/b03_page_ui.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class B02PageSkibidiUi extends StatefulWidget {
-  const B02PageSkibidiUi({super.key});
+class B03PageSkibidiUi extends StatefulWidget {
+  const B03PageSkibidiUi({super.key});
 
   @override
-  State<B02PageSkibidiUi> createState() => _B02PageSkibidiUiState();
+  State<B03PageSkibidiUi> createState() => _B03PageSkibidiUiState();
 }
 
-class _B02PageSkibidiUiState extends State<B02PageSkibidiUi> {
+class _B03PageSkibidiUiState extends State<B03PageSkibidiUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +23,7 @@ class _B02PageSkibidiUiState extends State<B02PageSkibidiUi> {
             child: Column(
               children: [
                 Text(
-                  "Login here",
+                  "Create Account",
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -32,19 +31,9 @@ class _B02PageSkibidiUiState extends State<B02PageSkibidiUi> {
                   ),
                 ),
                 Text(
-                  "Welcome back you've",
+                  "Create an account so you can explore all the existing jobs",
                   style: TextStyle(
                     color: Color(0XFF464444),
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                Text(
-                  "been missed",
-                  style: TextStyle(
-                    color: Color(0XFF464444),
-                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.center,
@@ -124,12 +113,39 @@ class _B02PageSkibidiUiState extends State<B02PageSkibidiUi> {
                   ),
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.025),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    "Forgot Password ?",
-                    style: TextStyle(
-                      color: Color(0XFF1F41BB),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius:
+                        BorderRadius.circular(MediaQuery.of(context).size.width * 0.035),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black26,
+                        blurRadius: 5,
+                        offset: Offset(0, 5),
+                      ),
+                    ],
+                  ),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Color(0XFFF1F4FF),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Color(0XFF1F41BB)),
+                        borderRadius:
+                            BorderRadius.circular(MediaQuery.of(context).size.width * 0.035),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide.none,
+                        borderRadius:
+                            BorderRadius.circular(MediaQuery.of(context).size.width * 0.035),
+                      ),
+                      hintText: "Comfirm Password",
+                      hintStyle: TextStyle(
+                        color: Color(0XFF666161),
+                      ),
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: MediaQuery.of(context).size.width * 0.035,
+                          vertical: MediaQuery.of(context).size.height * 0.025),
                     ),
                   ),
                 ),
@@ -158,12 +174,9 @@ class _B02PageSkibidiUiState extends State<B02PageSkibidiUi> {
                 SizedBox(height: MediaQuery.of(context).size.height * 0.025),
                 TextButton(
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => B03PageSkibidiUi()),
-                      );
+                      Navigator.pop(context);
                     },
-                    child: Text("Create new account")),
+                    child: Text("Aleady have an account")),
                 SizedBox(height: MediaQuery.of(context).size.height * 0.15),
                 Text(
                   "Or continue with",
