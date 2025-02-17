@@ -164,14 +164,14 @@ class _B02PageSkibidiUiState extends State<B02PageSkibidiUi> {
                       );
                     },
                     child: Text("Create new account")),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.15),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                 Text(
                   "Or continue with",
                   style: TextStyle(
                     color: Color(0XFF1F41BB),
                   ),
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -202,7 +202,7 @@ class _B02PageSkibidiUiState extends State<B02PageSkibidiUi> {
                         size: 30,
                       ),
                     ),
-                    SizedBox(width: MediaQuery.of(context).size.width * 0.025),
+                    SizedBox(width: MediaQuery.of(context).size.width * 0.001),
                     Container(
                       padding: EdgeInsets.all(MediaQuery.of(context).size.width * 0.025),
                       decoration: BoxDecoration(
